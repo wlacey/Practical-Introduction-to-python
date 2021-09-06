@@ -11,11 +11,13 @@ rectangle and a 4  8.
 6 7 8 9 0 1 2 3
 4 5 6 7 8 9 0 1"""
 
-width = eval(input("Enter Width: "))
-height = eval(input("Enter Height: "))
-
-for i in range(0,width*height,1):
-    print("")
-    for j in range(0+i,width+i,1):
-        print(j%10,end="")
-
+width = eval(input('Enter the width: '))
+height = eval(input('Enter the height: '))
+num = 0 # This count is for numbers in the matrix.
+for i in range(height):
+    count = 0 # Resets the count.
+    print(sep = "") # Will force the numbers to continue on next line.
+    while count < width: # While loop needed to create the width.
+        print(num%10, end = ' ') # Mod 10 needed to create a loop from 0 to 9 with an ongoing increased count.
+        num+=1
+        count+=1
